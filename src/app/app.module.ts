@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {HttpClientModule} from "@angular/common/http";
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import { InMemoryDataService } from './in-memory-data.service';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     DashboardComponent
   ],
   imports: [
+    //RouterModule.forRoot([]),
     BrowserModule,
     AppRoutingModule,
     FormsModule,

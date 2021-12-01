@@ -33,4 +33,10 @@ export class HeroesComponent implements OnInit {
       });
   }
 
+  delete(hero : Hero) : void {
+    this.heroes = this.heroes.filter(h => h !== hero); //delete from the components heroes array, NOT from the server
+    this.heroService.deleteHero(hero.id).subscribe();//delete trough the service, actual delete from the server
+
+  }
+
 }
